@@ -1,6 +1,7 @@
 ( function ()
 {
     "use strict";
+    var private_static_selected = null;
     function CommandList( _options )
     {
         if ( this instanceof CommandList )
@@ -10,6 +11,7 @@
             this.infoOptionId = ( typeof _options.infoOptionId === 'string' ) ? _options.splitter : '?';
             this.optionPrefix = ( typeof _options.optionPrefix === 'string' ) ? _options.optionPrefix : '';
             this.commands = [];
+            if (_options.selected === true) private_static_selected = this;
         }
         else return new CommandList( _options );
     }
@@ -67,6 +69,14 @@
     CommandList.prototype.get = CommandList.prototype.Get;
     CommandList.prototype.add = CommandList.prototype.Add;
     CommandList.prototype.remove = CommandList.prototype.Remove;
+    CommandList.ParseSelected = CommandList.parseSelected = function(_msg, _data)
+    {
+        private_static_selected.Parse(_msg, _data);
+    };
+    CommandList.Select = CommandList.select = function(_commandList)
+    {
+        if (_commandList instanceof CommandList) private_static_selected = _commandList;
+    };
 
     module.exports = CommandList;
 } () );

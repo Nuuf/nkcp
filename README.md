@@ -4,6 +4,10 @@
 
 ## Latest Update info
 
+1.0.1
+
+Added a default/selected option for lists, `parseSelected`, either via `nkcp` or `nkcp.CommandList`, `nkcp.parseSelected`
+
 1.0.0
 
 Added `CommandList` for dynamic parsing.
@@ -34,9 +38,9 @@ COMMAND: command -> does nothing
 
 ```js
 
-var cmd = require( 'nkcp' );
+var nkcp = require( 'nkcp' );
 
-const version = '1.0.0';
+const version = '1.0.1';
 var v_split = version.split( '.' );
 //Some options
 var cmdlist = nkcp.CommandList( { optionPrefix: '--' });
@@ -74,8 +78,8 @@ OPTION: --patch, --pa -> logs patch version
 
 1
 0
-0
-1.0.0
+1
+1.0.1
 */
 
 ```
@@ -84,8 +88,19 @@ OPTION: --patch, --pa -> logs patch version
 
 ```js
 
-var cmd = require( 'nkcp' );
+var nkcp = require( 'nkcp' );
 
-//TODO
+var cl = nkcp.CommandList({selected: true});
+cl.add(nkcp.Command('greet', function()
+{
+    console.log('hello!');
+}, 'greets'));
+
+nkcp.parseSelected('greet');
+
+//Output
+/*
+hello!
+*/
 
 ```
