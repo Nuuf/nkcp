@@ -11,7 +11,7 @@
             this.infoOptionId = ( typeof _options.infoOptionId === 'string' ) ? _options.splitter : '?';
             this.optionPrefix = ( typeof _options.optionPrefix === 'string' ) ? _options.optionPrefix : '';
             this.commands = [];
-            if (_options.selected === true) private_static_selected = this;
+            if ( _options.selected === true ) private_static_selected = this;
         }
         else return new CommandList( _options );
     }
@@ -51,11 +51,11 @@
                 _command.infoOptionId = _command.infoOptionId || this.infoOptionId;
                 _command.optionPrefix = _command.optionPrefix || this.optionPrefix;
                 _options = _options || {};
-                if (_options.breakOnOption === true || _options.breakOnOption === false) _command.breakOnOption = _options.breakOnOption;
-                if (_options.multipleOptions === true || _options.multipleOptions === false) _command.multipleOptions = _options.multipleOptions;
-                if (_options.optionRedundancy === true || _options.optionRedundancy === false) _command.optionRedundancy = _options.optionRedundancy;
-                if (_options.breakOnInfo === true || _options.breakOnInfo === false) _command.breakOnInfo = _options.breakOnInfo;
-                if (_options.optionPriority === 0 || _options.optionPriority === 1) _command.optionPriority = _options.optionPriority;
+                if ( _options.breakOnOption === true || _options.breakOnOption === false ) _command.breakOnOption = _options.breakOnOption;
+                if ( _options.multipleOptions === true || _options.multipleOptions === false ) _command.multipleOptions = _options.multipleOptions;
+                if ( _options.optionRedundancy === true || _options.optionRedundancy === false ) _command.optionRedundancy = _options.optionRedundancy;
+                if ( _options.breakOnInfo === true || _options.breakOnInfo === false ) _command.breakOnInfo = _options.breakOnInfo;
+                if ( _options.optionPriority === 0 || _options.optionPriority === 1 ) _command.optionPriority = _options.optionPriority;
                 this.commands.push( _command );
                 return _command;
             },
@@ -69,13 +69,13 @@
     CommandList.prototype.get = CommandList.prototype.Get;
     CommandList.prototype.add = CommandList.prototype.Add;
     CommandList.prototype.remove = CommandList.prototype.Remove;
-    CommandList.ParseSelected = CommandList.parseSelected = function(_msg, _data)
+    CommandList.ParseSelected = CommandList.parseSelected = function ( _msg, _data )
     {
-        private_static_selected.Parse(_msg, _data);
+        private_static_selected.Parse( _msg, _data );
     };
-    CommandList.Select = CommandList.select = function(_commandList)
+    CommandList.Select = CommandList.select = function ( _commandList )
     {
-        if (_commandList instanceof CommandList) private_static_selected = _commandList;
+        if ( _commandList instanceof CommandList ) private_static_selected = _commandList;
     };
 
     module.exports = CommandList;

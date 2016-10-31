@@ -149,7 +149,7 @@
                 if ( _id instanceof Command ) this.options.push( _id );
                 else
                 {
-                    _id = _id.replace(/([A-Za-z]+)/g, this.optionPrefix+'$1');
+                    _id = _id.replace( /([A-Za-z]+)/g, this.optionPrefix + '$1' );
                     this.options.push( new Command( _id, _handle, _info ) );
                 }
                 return this;

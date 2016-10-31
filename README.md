@@ -4,6 +4,10 @@
 
 ## Latest Update info
 
+1.0.3, 1.0.2
+
+Some clean-up
+
 1.0.1
 
 Added a default/selected option for lists, `parseSelected`, either via `nkcp` or `nkcp.CommandList`, `nkcp.parseSelected`
@@ -40,7 +44,7 @@ COMMAND: command -> does nothing
 
 var nkcp = require( 'nkcp' );
 
-const version = '1.0.2';
+const version = '1.0.3';
 var v_split = version.split( '.' );
 //Some options
 var cmdlist = nkcp.CommandList( { optionPrefix: '--' });
@@ -78,8 +82,8 @@ OPTION: --patch, --pa -> logs patch version
 
 1
 0
-2
-1.0.2
+3
+1.0.3
 */
 
 ```
@@ -104,3 +108,7 @@ hello!
 */
 
 ```
+
+##TODOs
+
+Comments
