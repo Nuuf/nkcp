@@ -50,7 +50,7 @@ cmdlist.add(
         console.log( version )
     }, 'logs current version' ),
     /*only one of each option allowed, more than one option allowed, if ? then break ALL, do not continue to main*/
-    { optionRedudancy: false, multipleOptions: true, breakOnInfo: true, breakOnOption: true }).
+    { optionRedundancy: false, multipleOptions: true, breakOnInfo: true, breakOnOption: true }).
     addOption( 'major ma', function ()
     {
         console.log( v_split[ 0 ] );
@@ -90,13 +90,13 @@ OPTION: --patch, --pa -> logs patch version
 
 var nkcp = require( 'nkcp' );
 
-var cl = nkcp.CommandList({selected: true});
-cl.add(nkcp.Command('greet', function()
+var cl = nkcp.CommandList( { selected: true });
+cl.add( nkcp.Command( 'greet', function ()
 {
-    console.log('hello!');
-}, 'greets'));
+    console.log( 'hello!' );
+}, 'greets' ) );
 
-nkcp.parseSelected('greet');
+nkcp.parseSelected( 'greet' );
 
 //Output
 /*
