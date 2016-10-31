@@ -40,7 +40,7 @@ COMMAND: command -> does nothing
 
 var nkcp = require( 'nkcp' );
 
-const version = '1.0.1';
+const version = '1.0.2';
 var v_split = version.split( '.' );
 //Some options
 var cmdlist = nkcp.CommandList( { optionPrefix: '--' });
@@ -78,8 +78,8 @@ OPTION: --patch, --pa -> logs patch version
 
 1
 0
-1
-1.0.1
+2
+1.0.2
 */
 
 ```

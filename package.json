@@ -1,6 +1,6 @@
 {
   "name": "nkcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parse commands/strings as you wish",
   "main": "index.js",
   "scripts": {
