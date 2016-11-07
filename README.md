@@ -4,6 +4,10 @@
 
 ## Latest Update info
 
+1.0.4
+
+Bug fix, Command.js l152, check if option prefix is actually specified
+
 1.0.3, 1.0.2
 
 Some clean-up
@@ -44,7 +48,7 @@ COMMAND: command -> does nothing
 
 var nkcp = require( 'nkcp' );
 
-const version = '1.0.3';
+const version = '1.0.4';
 var v_split = version.split( '.' );
 //Some options
 var cmdlist = nkcp.CommandList( { optionPrefix: '--' });
@@ -82,8 +86,8 @@ OPTION: --patch, --pa -> logs patch version
 
 1
 0
-3
-1.0.3
+4
+1.0.4
 */
 
 ```
